@@ -13,6 +13,7 @@ body {
     flex-direction: row-reverse;
     width: 75%;
     height: fit-content;
+    flex-shrink: 0.5;
     /* max-height: 400px; */
 }
 
@@ -20,6 +21,8 @@ body {
     background: url(images/bg-pattern-desktop.svg);
     /* max-height: 400px; */
     width: 50%;
+    min-width: 400px;
+    min-height: 620px;
 }
 
 .text {
@@ -33,15 +36,20 @@ body {
 .image {
     width: 50%;
     height: fit-content;
+    flex-grow: 1;
+    flex-shrink: 1;
+    
 }
 
 .desktopImg {
     width: 100%;
     height: fit-content;
+    min-height: 620px;
+    min-width: 472px;
 }
 
 .desktopLogo {
-    padding: 2rem 0 0 4rem;
+    padding: 2rem 0 0 5rem;
     height: 5%;
 }
 
@@ -71,18 +79,22 @@ form {
     flex-direction:row;
     
     /* This bit draws the box around it */
-    border:1px solid grey;
+    border:1px solid hsl(0, 6%, 24%);
+    border-radius:10%/100%;
   
     /* I've used padding so you can see the edges of the elements. */
     padding:2px;
     width: 85%;
+    min-width: 264px;
   }
   
   input {
     /* Tell the input to use all the available space */
     flex-grow:2;
     /* And hide the input's outline, so the form looks like the outline */
-    border:none;
+    border: none;
+    background: none;
+    padding: 0.75rem;
   }
   
   input:focus {
@@ -92,7 +104,37 @@ form {
   
   button {
     /* Just a little styling to make it pretty */
-    border:1px solid blue;
-    background:blue;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     color:white;
+    width: 3rem;
+    margin: 0;
+    border-radius: 60%/100%;
+    padding: 0;
+    border: 0;
+    min-width: 30px;
+  }
+
+  button:hover {
+      cursor: pointer;
+      background: linear-gradient(135deg, hsl(0, 74%, 80%), hsl(0, 100%, 98%));
+  }
+
+  ::placeholder {
+      color: hsl(0, 36%, 70%);
+  }
+
+  .errorIcon {
+      height: fit-content;
+      width: fit-content;
+      padding-right: 1rem;
+      padding-top: 0.5rem;
+      display: none;
+  }
+
+  .errorMsg {
+      color: hsl(0, 93%, 68%);
+      font-size: 12px;
+      margin-left: 0.85rem;
+      margin-top: 0.5rem;
+      display: none;
   }
