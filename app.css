@@ -1,0 +1,98 @@
+body {
+    /* background-color: black; */
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row-reverse;
+    width: 75%;
+    height: fit-content;
+    /* max-height: 400px; */
+}
+
+.content {
+    background: url(images/bg-pattern-desktop.svg);
+    /* max-height: 400px; */
+    width: 50%;
+}
+
+.text {
+    padding: 5rem;
+}
+
+.mobileImg, .mobileLogo {
+    display: none;
+}
+
+.image {
+    width: 50%;
+    height: fit-content;
+}
+
+.desktopImg {
+    width: 100%;
+    height: fit-content;
+}
+
+.desktopLogo {
+    padding: 2rem 0 0 4rem;
+    height: 5%;
+}
+
+.header {
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    color: hsl(0, 6%, 24%);
+}
+
+span {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.body {
+    color: hsl(0, 36%, 70%);
+    line-height: 1.5rem;
+    font-size: 12px;
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+form {
+    /* This bit sets up the horizontal layout */
+    display:flex;
+    flex-direction:row;
+    
+    /* This bit draws the box around it */
+    border:1px solid grey;
+  
+    /* I've used padding so you can see the edges of the elements. */
+    padding:2px;
+    width: 85%;
+  }
+  
+  input {
+    /* Tell the input to use all the available space */
+    flex-grow:2;
+    /* And hide the input's outline, so the form looks like the outline */
+    border:none;
+  }
+  
+  input:focus {
+    /* removing the input focus blue box. Put this on the form if you like. */
+    outline: none;
+  }
+  
+  button {
+    /* Just a little styling to make it pretty */
+    border:1px solid blue;
+    background:blue;
+    color:white;
+  }
