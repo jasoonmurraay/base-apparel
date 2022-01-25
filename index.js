@@ -8,6 +8,12 @@ button.addEventListener('click', function () {
         event.preventDefault();
         errorMsg();
         return false;
+    } if (input.value.indexOf('@') === -1) {
+        event.preventDefault();
+        errorMsg();
+    } if (input.value.indexOf('@') === (input.value.length - 1)) {
+        event.preventDefault();
+        errorMsg();
     }
 })
 
@@ -20,11 +26,4 @@ function errorMsg() {
     form.style.borderColor = 'hsl(0, 93%, 68%)';
 }
 
-function ValidateEmail(email) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.email.value)) {
-        return (true)
-    }
-    alert("You have entered an invalid email address!")
-    return (false)
-}
 
